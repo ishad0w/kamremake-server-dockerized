@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  stable-normal:
+    image: "ishad0w/kamremake-server:${r_stable}"
+    restart: always
+    ports:
+      - "56770:56770"
+      - "6770:6770"
+    environment:
+      ServerName: "[[$$CC6600]DEMO[]] Dockerized Server [$$66FFB2][Normal]"
+      WelcomeMessage: "|Welcome to Dockerized Server!|[$$66FFB2]Normal mode.[]||[$$FFCC66]Cluster (docker-image)[]: ishad0w/kamremake-server:${r_stable}|[$$FFB3B3]Discord (kam-remake)[]: https://discord.gg/UkkYceR||Good luck, have fun!|"
+      ServerPort: "56770"
+      MetricsPort: "6770"
+      MaxRooms: "${r_stable_maxrooms}"
+
+  beta-normal:
+    image: "ishad0w/kamremake-server:${r_beta}"
+    restart: always
+    ports:
+      - "56775:56775"
+      - "56765:56765"
+      - "6775:6775"
+    environment:
+      ServerName: "[[$$CC6600]DEMO[]] Dockerized Server [$$66FFB2][Normal]"
+      WelcomeMessage: "|Welcome to Dockerized Server!|[$$66FFB2]Normal mode.[]||[$$FFCC66]Cluster (docker-image)[]: ishad0w/kamremake-server:${r_beta}|[$$FFB3B3]Discord (kam-remake)[]: https://discord.gg/UkkYceR||Good luck, have fun!|"
+      ServerPort: "56775"
+      UDPScanPort: "56765"
+      MetricsPort: "6775"
+      MaxRooms: "${r_beta_maxrooms}"
