@@ -7,7 +7,7 @@ An a server (in a docker!) for fan-made mod for the game Knights and Merchants.
 ```
 kam-remake-server-dockerized
 ├── _kam-server-binaries    # (.gitignored directory, get server binaries at Releases page)
-│   ├── r1xxxx (beta)
+│   ├── r1xxxx (beta \ stable-ng)
 │   │   ├── KaM_Remake_Server_linux_x86_64
 │   │   └── KaM Remake Server Settings.ini
 │   └── r6720 (stable)

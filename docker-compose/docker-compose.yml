@@ -13,8 +13,8 @@ services:
       MetricsPort: "6770"
       MaxRooms: "${r_stable_maxrooms}"
 
-  beta-normal:
-    image: "ishad0w/kamremake-server:${r_beta}"
+  stable-ng-normal:
+    image: "ishad0w/kamremake-server:${r_stable_ng}"
     restart: always
     ports:
       - "56775:56775"
@@ -26,4 +26,4 @@ services:
       ServerPort: "56775"
       UDPScanPort: "56765"
       MetricsPort: "6775"
-      MaxRooms: "${r_beta_maxrooms}"
+      MaxRooms: "${r_stable_ng_maxrooms}"
