@@ -30,7 +30,7 @@ kam-remake-server-dockerized
 
 # Server Binaries
 
-Get it from [Releases](https://github.com/ishad0w-pub/kamremake-server-docker/releases)
+Get it from [Releases](https://github.com/ishad0w/kam_remake_server_dockerized/releases)
 
 # Build
 
