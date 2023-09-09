@@ -1,12 +1,12 @@
 # Exporter build stage
-FROM golang:1.18.2
+FROM golang:1.21.1
 
 WORKDIR /build/
 COPY metrics/exporter.go .
 RUN go build -ldflags "-s -w" exporter.go
 
 # Main image build stage
-FROM alpine:3.16.0
+FROM alpine:3.18.3
 
 ENV LANG=C.UTF-8
 
@@ -30,7 +30,7 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
         "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_BASE_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_BASE_URL/$ALPINE_GLIBC_PACKAGE_VERSION/$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \
-    apk add --no-cache bash \
+    apk add --force-overwrite --no-cache bash \
         "$ALPINE_GLIBC_BASE_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME" && \

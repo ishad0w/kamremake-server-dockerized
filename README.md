@@ -2,9 +2,9 @@
 
 An a server (in a docker!) for fan-made mod for the game Knights and Merchants.
 
-# Tree
+## Tree
 
-```
+```bash
 kam-remake-server-dockerized
 ├── _kam-server-binaries    # (.gitignored directory, get server binaries at Releases page)
 │   ├── r1xxxx (beta \ stable-ng)
@@ -28,16 +28,16 @@ kam-remake-server-dockerized
 └── README.md
 ```
 
-# Server Binaries
+## Server Binaries
 
 Get it from [Releases](https://github.com/ishad0w/kamremake-server-dockerized/releases)
 
-# Build
+## Build
 
 1. Customize __Makefile.env__
 2. `make build`
 
-# Push
+## Push
 
 1. Customize __Makefile.env__
 2. `make push`
